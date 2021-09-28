@@ -18,6 +18,9 @@ const NavBar = () => {
           <NavLink to="/signin" activeStyle>
             SignIn
           </NavLink>
+          <NavLink to="/mui_list" activeStyle>
+            Mui List
+          </NavLink>
           <NavLink to="/add_user" activeStyle>
             Add user
           </NavLink>

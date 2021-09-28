@@ -10,10 +10,13 @@ const Users = () => {
 
   return (
     <div>
-      Users: {user.name}
+      Number of users added, this is the latest one: {user.name}
       <ul>
         {users.map((x) => (
-          <li>{x.name}</li>
+          <li key={x.id}>
+            {x.name}
+            {x.id}
+          </li>
         ))}
       </ul>
     </div>

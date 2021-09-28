@@ -29,16 +29,13 @@ export function incrementAge(user) {
 }
 
 const defaultUser = {
-  name: "unknown-xxx",
+  name: "unknown",
   age: 35,
 };
 
-const defaultUsers = [{
-
-       name: "parrot",
-       id: 1,
-     
-}];
+const defaultUsers = [
+ 
+];
 
 function userReducer(state = defaultUser, action) {
   console.log(action);
@@ -63,8 +60,14 @@ function userReducer(state = defaultUser, action) {
 }
 
 function usersReducer(state = defaultUsers, action) {
-  console.log(action);
 
+  var idArray = state.map(function (el) {
+    return el.id;
+  });
+
+  var a =  idArray.length == 0 ? 0 : Number(Math.max(...idArray));
+  var max = Number.isNaN(a) ? 1 : Number(a);
+ 
   switch (action.type) {
 
     case ADD_USER:
@@ -72,7 +75,7 @@ function usersReducer(state = defaultUsers, action) {
          ...state,
          {
            name: action.user,
-           id: 2,
+           id: max+1,
          },
        ];
   

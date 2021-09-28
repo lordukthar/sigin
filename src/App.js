@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './components/pages/Home';
 import Dashboard from './components/pages/Dashboard';
 import SignIn from './components/pages/SignIn';
+import AlignItemsList from "./components/pages/AlignItemsList";
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 import NavBar, {
@@ -24,8 +25,11 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        
+
         <Switch>
+          <Route path="/mui_list">
+            <AlignItemsList />
+          </Route>
           <Route path="/add_user">
             <AddUser />
           </Route>
