@@ -40,7 +40,7 @@ const NavBar = () => {
 
 
 export const Nav = styled.nav`
-  background: orangered;
+  background: blue;
   height: 85px;
   display: flex;
   justify-content: space-between;
